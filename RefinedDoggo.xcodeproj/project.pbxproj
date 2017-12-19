@@ -16,6 +16,7 @@
 		73D834921FE5A8030064C54B /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D834911FE5A8030064C54B /* CameraViewController.swift */; };
 		73D834941FE5A8670064C54B /* TipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D834931FE5A8670064C54B /* TipViewController.swift */; };
 		73D834961FE5A8A70064C54B /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D834951FE5A8A70064C54B /* LibraryViewController.swift */; };
+		73FBC7D91FE75FD200C14B80 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FBC7D81FE75FD200C14B80 /* CameraController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		73D834911FE5A8030064C54B /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		73D834931FE5A8670064C54B /* TipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipViewController.swift; sourceTree = "<group>"; };
 		73D834951FE5A8A70064C54B /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		73FBC7D81FE75FD200C14B80 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		73D834581FE5A36B0064C54B /* RefinedDoggo */ = {
 			isa = PBXGroup;
 			children = (
+				73FBC7D71FE75FC300C14B80 /* Model */,
 				73D8348A1FE5A6E80064C54B /* ViewControllers */,
 				73D834591FE5A36C0064C54B /* AppDelegate.swift */,
 				73D8345D1FE5A36C0064C54B /* Main.storyboard */,
@@ -137,6 +140,14 @@
 				73D834951FE5A8A70064C54B /* LibraryViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		73FBC7D71FE75FC300C14B80 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				73FBC7D81FE75FD200C14B80 /* CameraController.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +288,7 @@
 				73D834941FE5A8670064C54B /* TipViewController.swift in Sources */,
 				73D834961FE5A8A70064C54B /* LibraryViewController.swift in Sources */,
 				73D834921FE5A8030064C54B /* CameraViewController.swift in Sources */,
+				73FBC7D91FE75FD200C14B80 /* CameraController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,7 +455,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 85RJ4G23MU;
 				INFOPLIST_FILE = RefinedDoggo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.learning.RefinedDoggo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -457,7 +471,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 85RJ4G23MU;
 				INFOPLIST_FILE = RefinedDoggo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.learning.RefinedDoggo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

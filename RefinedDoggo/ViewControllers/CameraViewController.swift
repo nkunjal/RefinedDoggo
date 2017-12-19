@@ -5,17 +5,65 @@
 //  Created by Neha Kunjal on 12/16/17.
 //  Copyright © 2017 Neha Kunjal. All rights reserved.
 //
-
+import AVFoundation
 import UIKit
 
-class CameraViewController: UIViewController {
-
+class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+    let captureSession = AVCaptureSession()
+    var videoPreviewLayer: CALayer!
+    var captureDevice: AVCaptureDevice!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        prepareCamera()
         // Do any additional setup after loading the view.
     }
 
+    func prepareCamera() {
+        captureSession.sessionPreset = AVCaptureSession.Preset.photo
+        let availableDevices = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaType.video, position: AVCaptureDevice.Position.back).devices
+        captureDevice = availableDevices.first
+        beginSession()
+        
+    }
+    func beginSession() {
+        do {
+            let captureDeviceInput = try AVCaptureDeviceInput(device: captureDevice)
+            captureSession.addInput(captureDeviceInput)
+        } catch {
+            print(error.localizedDescription)
+        }
+        let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+        self.videoPreviewLayer = previewLayer
+        self.view.layer.addSublayer(self.videoPreviewLayer)
+        self.videoPreviewLayer.frame = self.view.layer.frame
+        captureSession.startRunning()
+        let dataOutput = AVCaptureVideoDataOutput()
+        dataOutput.videoSettings = [((kCVPixelBufferPixelFormatTypeKey as NSString) as String): NSNumber(value: kCVPixelFormatType_32BGRA)]
+        dataOutput.alwaysDiscardsLateVideoFrames = true
+        if captureSession.canAddOutput(dataOutput) {
+            captureSession.addOutput(dataOutput)
+        }
+        captureSession.commitConfiguration()
+        let queue = DispatchQueue(label: "com.bestFriends")
+        dataOutput.setSampleBufferDelegate(self, queue: queue)
+    }
+    var photoTaken = false
+    @IBAction func takePhoto(_ sender: Any) {
+        photoTaken = true
+    }
+    
+    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+        if photoTaken {
+            photoTaken = false
+            //getSampleBuffer
+        }
+        
+    }
+    func getSampleBuffer(buffer: CMSampleBuffer) {
+        if let pixelBuffer = CMSampleBufferGetImageBuffer(buffer) {
+            
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
