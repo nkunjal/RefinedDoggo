@@ -55,14 +55,24 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         if photoTaken {
             photoTaken = false
-            //getSampleBuffer
+            if let image = self.getSampleBufferImage(buffer: sampleBuffer) {
+                DispatchQueue.main.async {
+                    let photoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "photoHasBeenTaken") as! PhotoViewController
+                }
+            }
         }
         
     }
-    func getSampleBuffer(buffer: CMSampleBuffer) {
+    func getSampleBufferImage(buffer: CMSampleBuffer) ->UIImage? {
         if let pixelBuffer = CMSampleBufferGetImageBuffer(buffer) {
-            
+            let ciImage = CIImage(cvPixelBuffer: pixelBuffer)
+            let context = CIContext()
+            let imageRect = CGRect(x: 0, y: 0, width: CVPixelBufferGetWidth(pixelBuffer), height: CVPixelBufferGetHeight(pixelBuffer))
+            if  let image = context.createCGImage(ciImage, from: imageRect) {
+                return UIImage(cgImage: image, scale: UIScreen.main.scale, orientation: .right)
+            }
         }
+        return nil
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

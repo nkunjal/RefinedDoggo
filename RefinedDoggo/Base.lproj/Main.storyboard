@@ -27,7 +27,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PCs-On-BfK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="454" y="-1093"/>
+            <point key="canvasLocation" x="41" y="271"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="5ci-0f-qYe">
@@ -47,7 +47,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Brg-u9-qJ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-501" y="-1426"/>
+            <point key="canvasLocation" x="-946" y="-275"/>
         </scene>
         <!--Tips-->
         <scene sceneID="d2u-bQ-Kfk">
@@ -65,7 +65,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ieD-xG-NlM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="454" y="-2446"/>
+            <point key="canvasLocation" x="41" y="-1082"/>
         </scene>
         <!--Camera-->
         <scene sceneID="6yx-ya-8Ef">
@@ -114,10 +114,47 @@
                         <viewLayoutGuide key="safeArea" id="Lo2-ue-vXQ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Camera" image="Camera" selectedImage="Camera" id="FBP-pA-8LN"/>
+                    <connections>
+                        <segue destination="NZF-vz-Ol4" kind="show" identifier="photoHasBeenTaken" id="Gc8-Wq-Dlz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UXE-0n-CZa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="453.60000000000002" y="-1769.865067466267"/>
+            <point key="canvasLocation" x="41" y="-413"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="R1N-pX-yjL">
+            <objects>
+                <viewController id="NZF-vz-Ol4" customClass="PhotoViewController" customModule="RefinedDoggo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mN7-vS-dVK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLx-b7-uDr">
+                                <rect key="frame" x="160" y="481" width="54" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Analyze"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pe6-ci-r6w">
+                                <rect key="frame" x="22" y="20" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&lt; Back"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UQq-wt-Yqr">
+                                <rect key="frame" x="67" y="61" width="240" height="396"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="cZg-gl-gje"/>
+                    </view>
+                    <connections>
+                        <outlet property="photoVC" destination="UQq-wt-Yqr" id="088-WN-OrJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yqu-5Z-vcc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1304.8" y="-413.3433283358321"/>
         </scene>
     </scenes>
     <resources>
