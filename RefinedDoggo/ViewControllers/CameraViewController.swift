@@ -23,13 +23,13 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         let availableDevices = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaType.video, position: AVCaptureDevice.Position.back).devices
         captureDevice = availableDevices.first
         beginSession()
-        
     }
     func beginSession() {
         do {
             let captureDeviceInput = try AVCaptureDeviceInput(device: captureDevice)
             captureSession.addInput(captureDeviceInput)
         } catch {
+            print("Error in the begin session method")
             print(error.localizedDescription)
         }
         let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
@@ -56,9 +56,9 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         if photoTaken {
             photoTaken = false
             if let image = self.getSampleBufferImage(buffer: sampleBuffer) {
-                DispatchQueue.main.async {
-                    let photoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "photoHasBeenTaken") as! PhotoViewController
-                }
+                let photoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PhotoVC") as! PhotoViewController
+                photoVC.takenPhoto = image
+                self.present(photoVC, animated: true, completion: nil)
             }
         }
         
