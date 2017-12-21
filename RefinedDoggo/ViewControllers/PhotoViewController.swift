@@ -11,8 +11,10 @@ import UIKit
 class PhotoViewController: UIViewController {
     var takenPhoto: UIImage?
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet var backButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        backButton.tintColor = UIColor.blue
         if let availableImage = takenPhoto {
             imageView.image = availableImage
         }

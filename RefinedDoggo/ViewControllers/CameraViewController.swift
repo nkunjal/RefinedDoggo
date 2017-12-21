@@ -52,13 +52,18 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         photoTaken = true
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! PhotoViewController
+        destination.takenPhoto = sender as? UIImage
+        
+    }
+    
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         if photoTaken {
             photoTaken = false
             if let image = self.getSampleBufferImage(buffer: sampleBuffer) {
-                let photoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PhotoVC") as! PhotoViewController
-                photoVC.takenPhoto = image
-                self.present(photoVC, animated: true, completion: nil)
+                self.performSegue(withIdentifier: "photoTakenID", sender: image)
+                //self.present(photoVC, animated: true, completion: nil)
             }
         }
         
