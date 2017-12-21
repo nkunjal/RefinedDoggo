@@ -9,6 +9,7 @@ import AVFoundation
 import UIKit
 
 class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+    @IBOutlet weak var button: UIButton!
     let captureSession = AVCaptureSession()
     var videoPreviewLayer: CALayer!
     var captureDevice: AVCaptureDevice!
@@ -19,12 +20,14 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
     }
 
     func prepareCamera() {
-        captureSession.sessionPreset = AVCaptureSession.Preset.photo
+        captureSession.sessionPreset = AVCaptureSession.Preset.high
+        button.isHidden = false
         let availableDevices = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaType.video, position: AVCaptureDevice.Position.back).devices
         captureDevice = availableDevices.first
         beginSession()
     }
     func beginSession() {
+        navigationController?.navigationBar.isHidden = true
         do {
             let captureDeviceInput = try AVCaptureDeviceInput(device: captureDevice)
             captureSession.addInput(captureDeviceInput)
@@ -36,6 +39,7 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
         self.videoPreviewLayer = previewLayer
         self.view.layer.addSublayer(self.videoPreviewLayer)
         self.videoPreviewLayer.frame = self.view.layer.frame
+        previewLayer.zPosition = -1
         captureSession.startRunning()
         let dataOutput = AVCaptureVideoDataOutput()
         dataOutput.videoSettings = [((kCVPixelBufferPixelFormatTypeKey as NSString) as String): NSNumber(value: kCVPixelFormatType_32BGRA)]
@@ -63,7 +67,6 @@ class CameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBuff
             photoTaken = false
             if let image = self.getSampleBufferImage(buffer: sampleBuffer) {
                 self.performSegue(withIdentifier: "photoTakenID", sender: image)
-                //self.present(photoVC, animated: true, completion: nil)
             }
         }
         

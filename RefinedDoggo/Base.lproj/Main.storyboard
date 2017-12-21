@@ -74,12 +74,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80e-xc-paY">
-                                <rect key="frame" x="172" y="583" width="34" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFt-ez-oly">
+                                <rect key="frame" x="149" y="570" width="76" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="Image"/>
+                                <state key="normal" title="Take Photo"/>
                                 <connections>
-                                    <action selector="takePhoto:" destination="hQR-bI-Xyr" eventType="touchUpInside" id="NqL-p6-DoQ"/>
+                                    <action selector="takePhoto:" destination="hQR-bI-Xyr" eventType="touchUpInside" id="83h-Jb-qEk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -88,12 +88,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Camera" image="Camera" selectedImage="Camera" id="FBP-pA-8LN"/>
                     <connections>
+                        <outlet property="button" destination="nFt-ez-oly" id="JTM-ig-jhr"/>
                         <segue destination="NZF-vz-Ol4" kind="show" identifier="photoTakenID" id="g76-MN-hiX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UXE-0n-CZa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="40.799999999999997" y="-360.2698650674663"/>
+            <point key="canvasLocation" x="41" y="-401"/>
         </scene>
         <!--Photo View Controller-->
         <scene sceneID="R1N-pX-yjL">
@@ -144,12 +145,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yqu-5Z-vcc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1156" y="-360.2698650674663"/>
+            <point key="canvasLocation" x="1057" y="-401"/>
         </scene>
     </scenes>
     <resources>
         <image name="Camera" width="28" height="28"/>
-        <image name="Image" width="150" height="142"/>
         <image name="Library" width="28" height="28"/>
         <image name="Tip" width="21" height="32"/>
     </resources>
