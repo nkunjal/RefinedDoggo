@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -72,18 +73,25 @@
                 <viewController id="hQR-bI-Xyr" customClass="CameraViewController" customModule="RefinedDoggo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tHo-oF-cbT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFt-ez-oly">
-                                <rect key="frame" x="149" y="570" width="76" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Take Photo"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFt-ez-oly">
+                                <rect key="frame" x="152" y="523" width="83" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nFt-ez-oly" secondAttribute="height" multiplier="1:1" id="eTK-DT-MEF"/>
+                                </constraints>
+                                <state key="normal" title="Take Photo" image="takePhotoButton"/>
                                 <connections>
                                     <action selector="takePhoto:" destination="hQR-bI-Xyr" eventType="touchUpInside" id="83h-Jb-qEk"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nFt-ez-oly" firstAttribute="top" secondItem="Lo2-ue-vXQ" secondAttribute="top" constant="503" id="Kmz-il-nKT"/>
+                            <constraint firstItem="Lo2-ue-vXQ" firstAttribute="trailing" secondItem="nFt-ez-oly" secondAttribute="trailing" constant="140" id="ZXf-xX-Hx1"/>
+                            <constraint firstItem="nFt-ez-oly" firstAttribute="leading" secondItem="Lo2-ue-vXQ" secondAttribute="leading" constant="152" id="fg3-ku-GGL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Lo2-ue-vXQ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Camera" image="Camera" selectedImage="Camera" id="FBP-pA-8LN"/>
@@ -94,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UXE-0n-CZa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="41" y="-401"/>
+            <point key="canvasLocation" x="40.799999999999997" y="-401.64917541229386"/>
         </scene>
         <!--Photo View Controller-->
         <scene sceneID="R1N-pX-yjL">
@@ -114,10 +122,12 @@
                                     <color key="titleColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9q-U5-TGo">
-                                <rect key="frame" x="15" y="20" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="&lt; Back">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9q-U5-TGo">
+                                <rect key="frame" x="23" y="20" width="32" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="W9q-U5-TGo" secondAttribute="height" multiplier="16:15" id="78G-B8-Uc0" userLabel="aspect = 16:16"/>
+                                </constraints>
+                                <state key="normal" title="&lt; Back" image="backButton">
                                     <color key="titleColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -128,6 +138,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="cZg-gl-gje" firstAttribute="bottom" secondItem="W9q-U5-TGo" secondAttribute="bottom" constant="617" id="2Qe-Xu-hRS"/>
+                            <constraint firstItem="cZg-gl-gje" firstAttribute="trailing" secondItem="W9q-U5-TGo" secondAttribute="trailing" constant="320" id="6aH-V7-D1Q"/>
                             <constraint firstItem="cZg-gl-gje" firstAttribute="bottom" secondItem="RLx-b7-uDr" secondAttribute="bottom" constant="99" id="Bl8-AB-VQC"/>
                             <constraint firstItem="RLx-b7-uDr" firstAttribute="leading" secondItem="cZg-gl-gje" secondAttribute="leading" constant="150" id="CS9-f1-U0b"/>
                             <constraint firstItem="UQq-wt-Yqr" firstAttribute="leading" secondItem="cZg-gl-gje" secondAttribute="leading" constant="72" id="Za6-xJ-uBA"/>
@@ -135,6 +147,7 @@
                             <constraint firstItem="RLx-b7-uDr" firstAttribute="top" secondItem="UQq-wt-Yqr" secondAttribute="bottom" constant="87" id="gym-Ja-zIe"/>
                             <constraint firstItem="UQq-wt-Yqr" firstAttribute="top" secondItem="cZg-gl-gje" secondAttribute="top" constant="35" id="jS3-Ae-rkn"/>
                             <constraint firstItem="cZg-gl-gje" firstAttribute="trailing" secondItem="RLx-b7-uDr" secondAttribute="trailing" constant="150" id="owm-zf-f3I"/>
+                            <constraint firstItem="W9q-U5-TGo" firstAttribute="top" secondItem="cZg-gl-gje" secondAttribute="top" id="zVu-v4-5JM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cZg-gl-gje"/>
                     </view>
@@ -145,12 +158,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yqu-5Z-vcc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057" y="-401"/>
+            <point key="canvasLocation" x="1056.8" y="-401.64917541229386"/>
         </scene>
     </scenes>
     <resources>
         <image name="Camera" width="28" height="28"/>
         <image name="Library" width="28" height="28"/>
         <image name="Tip" width="21" height="32"/>
+        <image name="backButton" width="338" height="338"/>
+        <image name="takePhotoButton" width="171" height="171"/>
     </resources>
 </document>
