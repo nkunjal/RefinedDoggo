@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		737F24451FEAF05D00918D40 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737F24441FEAF05D00918D40 /* PhotoViewController.swift */; };
-		737F24471FECAC1500918D40 /* EditingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737F24461FECAC1500918D40 /* EditingViewController.swift */; };
 		737F24491FECEB3800918D40 /* EditingTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737F24481FECEB3800918D40 /* EditingTabViewController.swift */; };
 		737F244B1FECEC2300918D40 /* BrightnessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737F244A1FECEC2300918D40 /* BrightnessViewController.swift */; };
 		737F244D1FECEC3D00918D40 /* ContrastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737F244C1FECEC3D00918D40 /* ContrastViewController.swift */; };
@@ -44,7 +43,6 @@
 
 /* Begin PBXFileReference section */
 		737F24441FEAF05D00918D40 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
-		737F24461FECAC1500918D40 /* EditingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingViewController.swift; sourceTree = "<group>"; };
 		737F24481FECEB3800918D40 /* EditingTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingTabViewController.swift; sourceTree = "<group>"; };
 		737F244A1FECEC2300918D40 /* BrightnessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightnessViewController.swift; sourceTree = "<group>"; };
 		737F244C1FECEC3D00918D40 /* ContrastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContrastViewController.swift; sourceTree = "<group>"; };
@@ -148,7 +146,6 @@
 			isa = PBXGroup;
 			children = (
 				73D834911FE5A8030064C54B /* CameraViewController.swift */,
-				737F24461FECAC1500918D40 /* EditingViewController.swift */,
 				737F244A1FECEC2300918D40 /* BrightnessViewController.swift */,
 				737F244C1FECEC3D00918D40 /* ContrastViewController.swift */,
 				737F244E1FECEC4B00918D40 /* ReviewViewController.swift */,
@@ -307,7 +304,6 @@
 				73D834961FE5A8A70064C54B /* LibraryViewController.swift in Sources */,
 				737F244B1FECEC2300918D40 /* BrightnessViewController.swift in Sources */,
 				737F24491FECEB3800918D40 /* EditingTabViewController.swift in Sources */,
-				737F24471FECAC1500918D40 /* EditingViewController.swift in Sources */,
 				737F244D1FECEC3D00918D40 /* ContrastViewController.swift in Sources */,
 				737F244F1FECEC4B00918D40 /* ReviewViewController.swift in Sources */,
 				73D834921FE5A8030064C54B /* CameraViewController.swift in Sources */,

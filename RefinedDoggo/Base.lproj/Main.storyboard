@@ -334,7 +334,7 @@
             </objects>
             <point key="canvasLocation" x="3117.5999999999999" y="-417.8410794602699"/>
         </scene>
-        <!--Contrast-->
+        <!--Review-->
         <scene sceneID="3kT-Gx-HNT">
             <objects>
                 <viewController id="6hl-RB-bqd" customClass="ContrastViewController" customModule="RefinedDoggo" customModuleProvider="target" sceneMemberID="viewController">
@@ -398,7 +398,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rXI-y9-Em1"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Contrast" id="jmN-sj-TPA"/>
+                    <tabBarItem key="tabBarItem" title="Review" id="jmN-sj-TPA"/>
                     <connections>
                         <outlet property="imageView" destination="gxy-t5-XtF" id="THw-By-Hsx"/>
                         <outlet property="tabBar" destination="Y7a-Qn-udQ" id="ZqQ-mL-a18"/>
