@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		737F24451FEAF05D00918D40 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737F24441FEAF05D00918D40 /* PhotoViewController.swift */; };
+		737F24471FECAC1500918D40 /* EditingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737F24461FECAC1500918D40 /* EditingViewController.swift */; };
+		737F24491FECEB3800918D40 /* EditingTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737F24481FECEB3800918D40 /* EditingTabViewController.swift */; };
+		737F244B1FECEC2300918D40 /* BrightnessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737F244A1FECEC2300918D40 /* BrightnessViewController.swift */; };
+		737F244D1FECEC3D00918D40 /* ContrastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737F244C1FECEC3D00918D40 /* ContrastViewController.swift */; };
+		737F244F1FECEC4B00918D40 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737F244E1FECEC4B00918D40 /* ReviewViewController.swift */; };
 		73D8345A1FE5A36C0064C54B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D834591FE5A36C0064C54B /* AppDelegate.swift */; };
 		73D8345F1FE5A36C0064C54B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73D8345D1FE5A36C0064C54B /* Main.storyboard */; };
 		73D834611FE5A36C0064C54B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73D834601FE5A36C0064C54B /* Assets.xcassets */; };
@@ -39,6 +44,11 @@
 
 /* Begin PBXFileReference section */
 		737F24441FEAF05D00918D40 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		737F24461FECAC1500918D40 /* EditingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingViewController.swift; sourceTree = "<group>"; };
+		737F24481FECEB3800918D40 /* EditingTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingTabViewController.swift; sourceTree = "<group>"; };
+		737F244A1FECEC2300918D40 /* BrightnessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightnessViewController.swift; sourceTree = "<group>"; };
+		737F244C1FECEC3D00918D40 /* ContrastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContrastViewController.swift; sourceTree = "<group>"; };
+		737F244E1FECEC4B00918D40 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		73D834561FE5A36B0064C54B /* RefinedDoggo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RefinedDoggo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73D834591FE5A36C0064C54B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73D8345E1FE5A36C0064C54B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -138,6 +148,11 @@
 			isa = PBXGroup;
 			children = (
 				73D834911FE5A8030064C54B /* CameraViewController.swift */,
+				737F24461FECAC1500918D40 /* EditingViewController.swift */,
+				737F244A1FECEC2300918D40 /* BrightnessViewController.swift */,
+				737F244C1FECEC3D00918D40 /* ContrastViewController.swift */,
+				737F244E1FECEC4B00918D40 /* ReviewViewController.swift */,
+				737F24481FECEB3800918D40 /* EditingTabViewController.swift */,
 				737F24441FEAF05D00918D40 /* PhotoViewController.swift */,
 				73D834931FE5A8670064C54B /* TipViewController.swift */,
 				73D834951FE5A8A70064C54B /* LibraryViewController.swift */,
@@ -290,6 +305,11 @@
 				73D8345A1FE5A36C0064C54B /* AppDelegate.swift in Sources */,
 				73D834941FE5A8670064C54B /* TipViewController.swift in Sources */,
 				73D834961FE5A8A70064C54B /* LibraryViewController.swift in Sources */,
+				737F244B1FECEC2300918D40 /* BrightnessViewController.swift in Sources */,
+				737F24491FECEB3800918D40 /* EditingTabViewController.swift in Sources */,
+				737F24471FECAC1500918D40 /* EditingViewController.swift in Sources */,
+				737F244D1FECEC3D00918D40 /* ContrastViewController.swift in Sources */,
+				737F244F1FECEC4B00918D40 /* ReviewViewController.swift in Sources */,
 				73D834921FE5A8030064C54B /* CameraViewController.swift in Sources */,
 				73FBC7D91FE75FD200C14B80 /* CameraController.swift in Sources */,
 				737F24451FEAF05D00918D40 /* PhotoViewController.swift in Sources */,
