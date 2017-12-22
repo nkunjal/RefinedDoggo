@@ -85,6 +85,11 @@
                                     <action selector="takePhoto:" destination="hQR-bI-Xyr" eventType="touchUpInside" id="83h-Jb-qEk"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZo-GM-tmR" userLabel="Face Outline">
+                                <rect key="frame" x="52" y="55" width="271" height="430"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="faceOutline"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -166,6 +171,7 @@
         <image name="Library" width="28" height="28"/>
         <image name="Tip" width="21" height="32"/>
         <image name="backButton" width="338" height="338"/>
+        <image name="faceOutline" width="424" height="738"/>
         <image name="takePhotoButton" width="171" height="171"/>
     </resources>
 </document>
