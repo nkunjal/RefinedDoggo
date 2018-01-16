@@ -10,10 +10,19 @@ import UIKit
 
 class ReviewViewController: UIViewController {
     var takenPhoto: UIImage?
-    @IBOutlet var tabBar: UITabBar!
+    @IBOutlet var tabBar: EditingTabViewController!
     @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tabView = self.tabBarController as! EditingTabViewController
+        takenPhoto = tabView.takenPhoto
+        if let availableImage = takenPhoto {
+            imageView.image = availableImage
+        }
+        // Do any additional setup after loading the view.
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
         let tabView = self.tabBarController as! EditingTabViewController
         takenPhoto = tabView.takenPhoto
         if let availableImage = takenPhoto {

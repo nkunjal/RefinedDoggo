@@ -10,8 +10,9 @@ import UIKit
 
 class BrightnessViewController: UIViewController {
     var takenPhoto: UIImage?
-    @IBOutlet var tabBar: UITabBar!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet var brightnessSlider: UISlider!
+    fileprivate var colorControl = ColorControl()
     override func viewDidLoad() {
         super.viewDidLoad()
         let tabView = self.tabBarController as! EditingTabViewController
@@ -20,8 +21,18 @@ class BrightnessViewController: UIViewController {
             imageView.image = availableImage
         }
         // Do any additional setup after loading the view.
+        colorControl.input(imageView.image!)
+        self.setUISLidersValues()
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        let tabView = self.tabBarController as! EditingTabViewController
+        takenPhoto = tabView.takenPhoto
+        if let availableImage = takenPhoto {
+            imageView.image = availableImage
+        }
+        // Do any additional setup after loading the view.
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -40,4 +51,26 @@ class BrightnessViewController: UIViewController {
     @IBAction func goBack(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    fileprivate func setUISLidersValues() {
+        brightnessSlider.value = colorControl.currentBrightnessValue
+        brightnessSlider.maximumValue = colorControl.maxBrightnessValue
+        brightnessSlider.minimumValue = colorControl.minBrightnessValue
+    }
+
+}
+extension BrightnessViewController {
+    
+    @IBAction func brightnessUISliderPressed(_ sender: UISlider) {
+        DispatchQueue.main.async {
+            //self.brightnessLabel.text = "Brightness \(sender.value)"
+            self.colorControl.brightness(sender.value)
+            self.imageView.image = self.colorControl.outputUIImage()
+            //let tabView = self.tabBarController as! EditingTabViewController
+            (self.tabBarController as! EditingTabViewController).takenPhoto =  self.imageView.image
+            print("changed")
+        }
+    }
+    
+    
+    
 }
