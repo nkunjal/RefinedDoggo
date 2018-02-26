@@ -67,7 +67,6 @@ extension BrightnessViewController {
             self.imageView.image = self.colorControl.outputUIImage()
             //let tabView = self.tabBarController as! EditingTabViewController
             (self.tabBarController as! EditingTabViewController).takenPhoto =  self.imageView.image
-            print("changed")
         }
     }
     
