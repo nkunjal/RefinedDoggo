@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7367843E2004847900D53E9B /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7367843D2004847900D53E9B /* ColorManager.swift */; };
+		73678440200484F200D53E9B /* Contrast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7367843F200484F200D53E9B /* Contrast.swift */; };
+		736784422004852600D53E9B /* Process.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736784412004852600D53E9B /* Process.swift */; };
+		73678444200485C100D53E9B /* Brightness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73678443200485C100D53E9B /* Brightness.swift */; };
 		737F24451FEAF05D00918D40 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737F24441FEAF05D00918D40 /* PhotoViewController.swift */; };
 		737F24491FECEB3800918D40 /* EditingTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737F24481FECEB3800918D40 /* EditingTabViewController.swift */; };
 		737F244B1FECEC2300918D40 /* BrightnessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737F244A1FECEC2300918D40 /* BrightnessViewController.swift */; };
@@ -42,6 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7367843D2004847900D53E9B /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorManager.swift; path = RefinedDoggo/Model/ColorManager.swift; sourceTree = SOURCE_ROOT; };
+		7367843F200484F200D53E9B /* Contrast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Contrast.swift; path = RefinedDoggo/Model/Contrast.swift; sourceTree = SOURCE_ROOT; };
+		736784412004852600D53E9B /* Process.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Process.swift; sourceTree = "<group>"; };
+		73678443200485C100D53E9B /* Brightness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brightness.swift; sourceTree = "<group>"; };
 		737F24441FEAF05D00918D40 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		737F24481FECEB3800918D40 /* EditingTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingTabViewController.swift; sourceTree = "<group>"; };
 		737F244A1FECEC2300918D40 /* BrightnessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightnessViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +168,10 @@
 		73FBC7D71FE75FC300C14B80 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7367843D2004847900D53E9B /* ColorManager.swift */,
+				736784412004852600D53E9B /* Process.swift */,
+				73678443200485C100D53E9B /* Brightness.swift */,
+				7367843F200484F200D53E9B /* Contrast.swift */,
 				73FBC7D81FE75FD200C14B80 /* CameraController.swift */,
 			);
 			path = Model;
@@ -301,6 +313,7 @@
 			files = (
 				73D8345A1FE5A36C0064C54B /* AppDelegate.swift in Sources */,
 				73D834941FE5A8670064C54B /* TipViewController.swift in Sources */,
+				73678444200485C100D53E9B /* Brightness.swift in Sources */,
 				73D834961FE5A8A70064C54B /* LibraryViewController.swift in Sources */,
 				737F244B1FECEC2300918D40 /* BrightnessViewController.swift in Sources */,
 				737F24491FECEB3800918D40 /* EditingTabViewController.swift in Sources */,
@@ -308,7 +321,10 @@
 				737F244F1FECEC4B00918D40 /* ReviewViewController.swift in Sources */,
 				73D834921FE5A8030064C54B /* CameraViewController.swift in Sources */,
 				73FBC7D91FE75FD200C14B80 /* CameraController.swift in Sources */,
+				7367843E2004847900D53E9B /* ColorManager.swift in Sources */,
 				737F24451FEAF05D00918D40 /* PhotoViewController.swift in Sources */,
+				736784422004852600D53E9B /* Process.swift in Sources */,
+				73678440200484F200D53E9B /* Contrast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
